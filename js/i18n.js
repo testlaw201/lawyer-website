@@ -18,7 +18,7 @@ const translations = {
         },
         services: {
             title: '业务领域',
-            civil: '民事法律',
+            civil: '民事诉讼',
             immigration: '移民法律',
             familylaw: '婚姻家事',
             realproperty: '房地产法律',
@@ -72,7 +72,7 @@ const translations = {
         },
         services: {
             title: 'Practice Areas',
-            civil: 'Civil Law',
+            civil: 'civil litigation',
             immigration: 'Immigration Law',
             familylaw: 'Family Law',
             realproperty: 'Real Estate Law',
