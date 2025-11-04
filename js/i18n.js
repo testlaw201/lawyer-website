@@ -1,6 +1,9 @@
 // 国际化翻译配置
 const translations = {
     zh: {
+        header: {
+            firmName: '吕昕橦律师事务所'
+        },
         nav: {
             home: '主页',
             services: '业务领域',
@@ -51,6 +54,9 @@ const translations = {
         }
     },
     en: {
+        header: {
+            firmName: 'Catherine Lyu Law PLLC'
+        },
         nav: {
             home: 'Home',
             services: 'Services',
@@ -119,10 +125,12 @@ function t(key) {
 }
 
 // 切换语言
-function toggleLanguage() {
-    currentLang = currentLang === 'zh' ? 'en' : 'zh';
-    localStorage.setItem('language', currentLang);
-    updatePageLanguage();
+function switchLanguage(lang) {
+    if (lang && (lang === 'zh' || lang === 'en')) {
+        currentLang = lang;
+        localStorage.setItem('language', currentLang);
+        updatePageLanguage();
+    }
 }
 
 // 更新页面语言
@@ -139,10 +147,10 @@ function updatePageLanguage() {
         element.placeholder = t(key);
     });
 
-    // 更新语言按钮
-    const langBtn = document.getElementById('lang-toggle');
-    if (langBtn) {
-        langBtn.textContent = currentLang === 'zh' ? 'EN' : '中文';
+    // 更新语言选择器
+    const langSelect = document.getElementById('lang-select');
+    if (langSelect) {
+        langSelect.value = currentLang;
     }
 
     // 触发自定义事件，让其他模块知道语言已切换
@@ -156,5 +164,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 导出到全局
 window.t = t;
-window.toggleLanguage = toggleLanguage;
+window.switchLanguage = switchLanguage;
 window.currentLang = currentLang;
