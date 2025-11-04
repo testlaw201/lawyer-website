@@ -1,50 +1,50 @@
 <!-- 预约律师区域 -->
 <section id="appointment">
-    <h2 class="section-title">预约律师咨询</h2>
+    <h2 class="section-title" data-i18n="appointment.title">预约律师咨询</h2>
     <div class="hero-section" style="margin-bottom: 40px;">
-        <h1>免费案件评估</h1>
-        <p>请填写以下信息，我们的律师团队将在24小时内与您联系，为您提供免费的案件初步评估和法律咨询建议。</p>
+        <h1 data-i18n="appointment.heading">免费案件评估</h1>
+        <p data-i18n="appointment.description">请填写以下信息，我们的律师团队将在24小时内与您联系，为您提供免费的案件初步评估和法律咨询建议。</p>
     </div>
 
     <form class="appointment-form" onsubmit="handleSubmit(event)">
         <div class="form-group">
-            <label for="name">姓名 </label>
+            <label for="name" data-i18n="appointment.name">姓名</label>
             <input type="text" id="name" name="name" required>
         </div>
 
         <div class="form-group">
-            <label for="phone">联系电话 </label>
+            <label for="phone" data-i18n="appointment.phone">联系电话</label>
             <input type="tel" id="phone" name="phone" required>
         </div>
 
         <div class="form-group">
-            <label for="email">电子邮箱</label>
+            <label for="email" data-i18n="appointment.email">电子邮箱</label>
             <input type="email" id="email" name="email">
         </div>
 
         <div class="form-group">
-            <label for="case-type">案件类型 </label>
+            <label for="case-type" data-i18n="appointment.caseType">案件类型</label>
             <select id="case-type" name="case-type" required>
-                <option value="">请选择案件类型</option>
-                <option value="civil">民事法律</option>
-                <option value="immigration">移民法律</option>
-                <option value="familylaw">婚姻家事</option>
-                <option value="realproperty">房地产法律</option>
-                <option value="personalinjury">人身伤害</option>
-                <option value="criminal">刑事辩护</option>
-                <option value="business">商业法律</option>
-                <option value="ip">知识产权</option>
-                <option value="other">其他</option>
+                <option value="" data-i18n="appointment.selectCase">请选择案件类型</option>
+                <option value="civil" data-i18n="services.civil">民事法律</option>
+                <option value="immigration" data-i18n="services.immigration">移民法律</option>
+                <option value="familylaw" data-i18n="services.familylaw">婚姻家事</option>
+                <option value="realproperty" data-i18n="services.realproperty">房地产法律</option>
+                <option value="personalinjury" data-i18n="services.personalinjury">人身伤害</option>
+                <option value="criminal" data-i18n="services.criminal">刑事辩护</option>
+                <option value="business" data-i18n="services.business">商业法律</option>
+                <option value="ip" data-i18n="services.ip">知识产权</option>
+                <option value="other" data-i18n="appointment.other">其他</option>
             </select>
         </div>
 
-        
+
 
         <div class="form-group">
-            <label for="message">案件简述 </label>
-            <textarea id="message" name="message" placeholder="请简要描述您的法律问题或案件情况..." required></textarea>
+            <label for="message" data-i18n="appointment.message">案件简述</label>
+            <textarea id="message" name="message" data-i18n-placeholder="appointment.messagePlaceholder" placeholder="请简要描述您的法律问题或案件情况..." required></textarea>
         </div>
 
-        <button type="submit" class="submit-btn">提交预约申请</button>
+        <button type="submit" class="submit-btn" data-i18n="appointment.submit">提交预约申请</button>
     </form>
 </section>
