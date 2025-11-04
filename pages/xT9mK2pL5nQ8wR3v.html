@@ -9,6 +9,7 @@
         .admin-container {
             max-width: 1200px;
             margin: 40px auto;
+            
             padding: 20px;
         }
 
@@ -158,8 +159,20 @@
     </style>
 </head>
 <body>
-    <!-- 导航栏容器 -->
-    <div id="header-container"></div>
+    <!-- 导航栏 -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="吕昕橦律师事务所">
+                <div class="logo-text">
+                    吕昕橦律师事务所
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">返回主页</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="main-content">
         <div class="admin-container">
@@ -207,7 +220,6 @@
     </main>
 
     <script src="../js/config.js"></script>
-    <script src="../js/modules/componentLoader.js"></script>
     <script>
         // 获取案件类型中文名称
         function getCaseTypeName(caseType) {
