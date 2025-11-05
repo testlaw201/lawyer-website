@@ -243,11 +243,11 @@
         .appointment-form {
             max-width: 700px;
             margin: 0 auto;
-            background: #E8DED0;
+            background: white;
             padding: 50px;
             border: 2px solid #8B2635;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: none;
         }
 
         .form-group {
