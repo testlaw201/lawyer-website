@@ -1,27 +1,180 @@
 <!-- 导航栏 -->
 <header class="header">
-    <nav class="nav-container">
-        <div class="logo">
-            <img src="images/logo.png" alt="吕昕橦律师事务所">
-            <div class="logo-text" data-i18n="header.firmName">
+    <!-- 第一行：Logo、律所名称、电话、语言选择 -->
+    <div class="header-top">
+        <div class="header-top-container">
+            <!-- 左侧：Logo -->
+            <a href="about.html" class="header-logo">
+                <img src="images/logo.png" alt="吕昕橦律师事务所">
+            </a>
+
+            <!-- 居中：律所名称 -->
+            <div class="header-firm-name" data-i18n="header.firmName">
                 吕昕橦律师事务所
             </div>
+
+            <!-- 右侧：电话和语言选择 -->
+            <div class="header-right">
+                <span class="header-phone" id="header-phone">📞 (212)812-8253</span>
+                <div class="lang-toggle">
+                    <span id="lang-zh" class="lang-option active" onclick="switchLanguage('zh')">中文</span>
+                    <span class="lang-separator">/</span>
+                    <span id="lang-en" class="lang-option" onclick="switchLanguage('en')">EN</span>
+                </div>
+            </div>
         </div>
-        <ul class="nav-menu">
-            <li><a href="#home" data-i18n="nav.home">主页</a></li>
-            <li><a href="#services" data-i18n="nav.services">业务领域</a></li>
-            <li><a href="#appointment" data-i18n="nav.appointment">预约律师</a></li>
-            <li><a href="#contact" data-i18n="nav.contact">联系方式</a></li>
-            <li><span class="phone-contact" id="header-phone">📞 (212)812-8253</span></li>
-            <li style="position: relative;">
-                <select id="lang-select" onchange="switchLanguage(this.value)" style="background: transparent; border: 2px solid #8B2635; color: #8B2635; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 14px; font-family: inherit;">
-                    <option value="zh">中文</option>
-                    <option value="en">EN</option>
-                </select>
-            </li>
-        </ul>
+    </div>
+
+    <!-- 第二行：导航菜单 -->
+    <nav class="header-nav">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+                <li><a href="services.html" data-i18n="nav.services">业务领域</a></li>
+                <li><a href="appointment.html" data-i18n="nav.appointment">案件咨询</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">联系方式</a></li>
+                <li><a href="joinus.html" data-i18n="nav.joinus">加入我们</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
+
+<style>
+    /* Header 整体样式 */
+    .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* 第一行样式 */
+    .header-top {
+        border-bottom: none;
+        padding: 15px 0;
+    }
+
+    .header-top-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Logo */
+    .header-logo {
+        flex: 0 0 auto;
+    }
+
+    .header-logo img {
+        height: 60px;
+        width: auto;
+    }
+
+    /* 律所名称居中 */
+    .header-firm-name {
+        flex: 1;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: #2c2c2c;
+        letter-spacing: 2px;
+    }
+
+    /* 右侧：电话和语言 */
+    .header-right {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header-phone {
+        color: #8B2635;
+        font-weight: bold;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .lang-toggle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: 2px solid #8B2635;
+        padding: 8px 15px;
+        border-radius: 5px;
+    }
+
+    .lang-option {
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 14px;
+        color: #8B2635;
+        transition: all 0.3s;
+        opacity: 0.5;
+    }
+
+    .lang-option.active {
+        opacity: 1;
+        text-decoration: underline;
+    }
+
+    .lang-option:hover {
+        opacity: 1;
+    }
+
+    .lang-separator {
+        color: #8B2635;
+        font-weight: bold;
+    }
+
+    /* 第二行导航菜单 */
+    .header-nav {
+        padding: 15px 0;
+    }
+
+    .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+        gap: 0;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .nav-menu li a {
+        color: #2c2c2c;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        transition: color 0.3s;
+        cursor: pointer;
+    }
+
+    .nav-menu li a:hover {
+        color: #8B2635;
+    }
+
+    /* 调整主内容区域的margin */
+    .main-content {
+        margin-top: 160px !important;
+    }
+</style>
 
 <script>
 // 更新导航栏联系信息

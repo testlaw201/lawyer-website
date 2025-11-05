@@ -37,11 +37,28 @@
 
     </div>
 
-    <!-- 地图 -->
-    <div class="footer-map" style="text-align: center; margin-top: 40px;">
-        <img src="images/地图.png" alt="办公地点地图" style="max-width: 50%; height: auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <!-- 二维码和地图并排容器（默认隐藏，仅在contact页面显示） -->
+    <div class="footer-visual-container" style="display: flex; justify-content: center; gap: 60px; margin-top: 40px; flex-wrap: wrap;">
+        <!-- 微信二维码 -->
+        <div class="footer-qrcode" style="text-align: center;">
+            <h3 data-i18n="footer.wechatQRCode" style="margin-bottom: 20px;">微信二维码</h3>
+            <img src="images/wechat-qrcode.png" alt="微信二维码" style="max-width: 300px; height: auto;">
+        </div>
+
+        <!-- 地图 -->
+        <div class="footer-map" style="text-align: center;">
+            <h3 data-i18n="footer.mapTitle" style="margin-bottom: 20px;">办公地点</h3>
+            <img src="images/地图.png" alt="办公地点地图" style="max-width: 500px; height: auto;">
+        </div>
     </div>
 </div>
+
+<style>
+    /* 默认情况下隐藏地图和二维码容器，只在contact页面显示 */
+    .no-map .footer-visual-container {
+        display: none !important;
+    }
+</style>
 
 <script>
 // 更新页脚联系信息

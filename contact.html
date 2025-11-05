@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系方式 - 吕昕橦律师事务所</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: white !important;
+            color: #2c2c2c !important;
+        }
+        /* 去掉所有框和背景色 */
+        .page-footer {
+            background: white !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        .footer-info {
+            background: white !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        .footer-content {
+            background: white !important;
+        }
+        /* 所有文字改为黑色 */
+        h1, h2, h3, h4, h5, h6, p, span, div, label, strong {
+            color: #2c2c2c !important;
+        }
+        .section-title {
+            color: #2c2c2c !important;
+        }
+        .page-footer h2, .page-footer h3, .page-footer p, .page-footer span, .page-footer strong {
+            color: #2c2c2c !important;
+        }
+        .page-footer .availability {
+            color: #2c2c2c !important;
+        }
+        .footer-contact-item {
+            color: #2c2c2c !important;
+        }
+        .footer-contact-item strong {
+            color: #2c2c2c !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <section id="contact">
+            <!-- 页面底部联系信息容器 -->
+            <div id="footer-container"></div>
+        </section>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/navigation.js"></script>
+    <script>
+        // 组件加载器
+        async function loadComponent(componentName, targetId) {
+            try {
+                const response = await fetch(`components/${componentName}.html`);
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${componentName}`);
+                }
+                const html = await response.text();
+                document.getElementById(targetId).innerHTML = html;
+            } catch (error) {
+                console.error(`Error loading component ${componentName}:`, error);
+            }
+        }
+
+        // 页面加载时自动加载所有模块
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadComponent('header', 'header-container');
+            await loadComponent('footer', 'footer-container');
+        });
+    </script>
+</body>
+</html>

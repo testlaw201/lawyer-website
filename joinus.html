@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入我们 - 吕昕橦律师事务所</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: white !important;
+            color: #2c2c2c !important;
+        }
+        /* 去掉所有框和背景色 */
+        .hero-section {
+            background: white !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        .service-card {
+            background: white !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        .page-footer {
+            background: white !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        /* 所有文字改为黑色 */
+        h1, h2, h3, h4, h5, h6, p, span, div, label, ul, li, a {
+            color: #2c2c2c !important;
+        }
+        .section-title {
+            color: #2c2c2c !important;
+        }
+        .page-footer h2, .page-footer h3, .page-footer p, .page-footer span, .page-footer strong {
+            color: #2c2c2c !important;
+        }
+        .page-footer .availability {
+            color: #2c2c2c !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <section id="joinus">
+            <h2 class="section-title" data-i18n="joinus.title">加入我们</h2>
+
+            <div style="max-width: 900px; margin: 40px auto; padding: 0 40px; text-align: left; line-height: 2;">
+                <h3 data-i18n="joinus.positions" style="font-size: 24px; margin-bottom: 20px;">招聘职位：Law Clerk（法律助理）</h3>
+
+                <h4 data-i18n="joinus.jobDuties" style="font-size: 20px; margin-top: 30px; margin-bottom: 15px;">工作内容：</h4>
+                <ul style="list-style: disc; margin-left: 30px;">
+                    <li data-i18n="joinus.duty1">协助律师进行法律检索与材料整理</li>
+                    <li data-i18n="joinus.duty2">起草、整理和校对法律文件</li>
+                    <li data-i18n="joinus.duty3">协助准备法院或移民申请材料</li>
+                    <li data-i18n="joinus.duty4">管理案件档案，与客户或机构沟通</li>
+                    <li data-i18n="joinus.duty5">完成律师交办的其他工作</li>
+                </ul>
+
+                <h4 data-i18n="joinus.requirements" style="font-size: 20px; margin-top: 30px; margin-bottom: 15px;">岗位要求：</h4>
+                <ul style="list-style: disc; margin-left: 30px;">
+                    <li data-i18n="joinus.requirement1">毕业于美国法学院（JD优先）</li>
+                    <li data-i18n="joinus.requirement2">中英文读写良好，能够处理双语文件</li>
+                    <li data-i18n="joinus.requirement3">工作认真、细心、有责任感</li>
+                    <li data-i18n="joinus.requirement4">有律所或相关经验</li>
+                </ul>
+
+                <h4 data-i18n="joinus.workArrangement" style="font-size: 20px; margin-top: 30px; margin-bottom: 15px;">工作安排：</h4>
+                <ul style="list-style: disc; margin-left: 30px;">
+                    <li data-i18n="joinus.location">工作地点：纽约法拉盛</li>
+                </ul>
+
+                <h4 data-i18n="joinus.applicationMethod" style="font-size: 20px; margin-top: 30px; margin-bottom: 15px;">申请方式：</h4>
+                <p data-i18n="joinus.applicationInfo" style="margin-left: 30px;">请将简历发送至：catherine.lyu@lyulawpllc.com</p>
+                <p data-i18n="joinus.emailSubject" style="margin-left: 30px;">邮件标题注明："Law Clerk – 姓名"</p>
+            </div>
+        </section>
+
+        <!-- 联系方式区域（不含地图） -->
+        <section id="contact">
+            <div id="footer-container" class="no-map"></div>
+        </section>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/navigation.js"></script>
+    <script>
+        // 组件加载器
+        async function loadComponent(componentName, targetId) {
+            try {
+                const response = await fetch(`components/${componentName}.html`);
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${componentName}`);
+                }
+                const html = await response.text();
+                document.getElementById(targetId).innerHTML = html;
+            } catch (error) {
+                console.error(`Error loading component ${componentName}:`, error);
+            }
+        }
+
+        // 页面加载时自动加载所有模块
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadComponent('header', 'header-container');
+            await loadComponent('footer', 'footer-container');
+        });
+    </script>
+</body>
+</html>

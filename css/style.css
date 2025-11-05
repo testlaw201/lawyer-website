@@ -436,14 +436,14 @@
         .page-footer {
             margin-top: 80px;
             padding: 50px 40px;
-            background: #E8DED0;
-            border: 3px solid #8B2635;
+            background: white;
+            border: none;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: none;
         }
 
         .page-footer h2 {
-            color: #8B2635;
+            color: #2c2c2c;
             font-size: 32px;
             text-align: center;
             margin-bottom: 10px;
@@ -453,14 +453,14 @@
             text-align: center;
             font-size: 24px;
             font-weight: bold;
-            color: #8B2635;
+            color: #2c2c2c;
             margin-bottom: 20px;
         }
 
         .page-footer .subtitle {
             text-align: center;
             font-size: 18px;
-            color: #5c5c5c;
+            color: #2c2c2c;
             margin-bottom: 40px;
         }
 
@@ -470,15 +470,15 @@
         }
 
         .footer-info {
-            background: #fff;
+            background: white;
             padding: 35px;
             border-radius: 8px;
             margin-bottom: 30px;
-            border: 2px solid #8B2635;
+            border: none;
         }
 
         .footer-info h3 {
-            color: #8B2635;
+            color: #2c2c2c;
             font-size: 24px;
             margin-bottom: 20px;
             text-align: center;
@@ -493,12 +493,12 @@
 
         .footer-contact-item {
             font-size: 16px;
-            color: #3c3c3c;
+            color: #2c2c2c;
             line-height: 1.8;
         }
 
         .footer-contact-item strong {
-            color: #8B2635;
+            color: #2c2c2c;
             display: block;
             margin-bottom: 5px;
         }
