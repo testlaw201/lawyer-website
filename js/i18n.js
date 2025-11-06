@@ -96,17 +96,17 @@ const translations = {
         about: {
             title: 'About Us',
             firmName: 'The Law Office of X.Lyu, PLLC',
-            paragraph1: 'The Law Office of X.Lyu, PLLC is composed of a team of experienced and highly qualified professional attorneys. All attorneys graduated from prestigious U.S. law schools and hold Juris Doctor (J.D.) degrees. They are fluent in both Chinese and English, familiar with the U.S. legal system, and possess solid legal theory and practical skills. Our attorneys have worked in government agencies, judicial departments, internationally renowned law firms, and large corporations, accumulating extensive professional experience and successful cases in their respective fields.',
-            paragraph2: 'Our firm offers a wide range of legal services, including civil litigation, family law, criminal defense, immigration law, real estate transactions and disputes, personal injury, intellectual property, business law, and more.',
-            paragraph3: 'We uphold the philosophy of "precise judgment and pursuit of excellence," adhering to independent and prudent professional ethics, and dedicating ourselves to the legal field with craftsmanship. Relying on our professional and rigorous legal team, forward-thinking legal strategies, and exceptional problem-solving capabilities, we are committed to providing clients with comprehensive, full-process, high-quality legal solutions, protecting clients\' legitimate rights and interests, and safeguarding every trust placed in us.',
-            value1: 'Professional',
-            value2: 'Focused',
-            value3: 'Efficient',
-            value4: 'Trustworthy'
+            paragraph1: 'The Law Office of X. Lyu, PLLC is a bilingual Chinese-English law firm dedicated to serving individuals, families, and businesses in the United States. Our attorneys are graduates of leading U.S. law schools, hold Juris Doctor degrees, and have extensive experience across government, courts, top international law firms, and major corporations.',
+            paragraph2: 'We provide legal services in civil litigation, family law, criminal defense, immigration law, real estate transactions and disputes, business and commercial law, personal injury, and intellectual property.',
+            paragraph3: 'We believe in precise strategy, exceptional service, and uncompromised professionalism. With a rigorous legal team and strong problem-solving capabilities, we deliver comprehensive and high-quality legal solutions—protecting our clients\' rights and earning their trust with every case.',
+            value1: 'Professional Service.',
+            value2: 'Dedicated Approach.',
+            value3: 'Efficient Results.',
+            value4: 'Trusted by Clients.'
         },
         services: {
             title: 'Practice Areas',
-            civil: 'civil litigation',
+            civil: 'Civil Litigation',
             immigration: 'Immigration Law',
             familylaw: 'Family Law',
             realproperty: 'Real Estate Law',
@@ -116,7 +116,7 @@ const translations = {
             ip: 'Intellectual Property'
         },
         appointment: {
-            title: 'Schedule Consultation',
+            title: 'Book a Free Attorney Consultation',
             heading: 'Free Case Evaluation',
             description: 'Please fill out the information below, and our legal team will contact you within 24 hours to provide a free preliminary case assessment and legal consultation.',
             name: 'Name',
@@ -132,7 +132,7 @@ const translations = {
         footer: {
             title: 'Contact Us',
             availability: '24/7',
-            subtitle: 'If you have any legal needs, please feel free to contact us',
+            subtitle: 'If you require any legal assistance, please do not hesitate to contact us.',
             firmName: 'The Law Office of X.Lyu,PLLC',
             phone: 'Phone',
             address: 'Address',
@@ -146,22 +146,22 @@ const translations = {
         joinus: {
             title: 'Join Us',
             positions: 'Position: Law Clerk',
-            jobDuties: 'Job Duties:',
-            duty1: 'Assist attorneys with legal research and document organization',
+            jobDuties: 'Job Responsibilities:',
+            duty1: 'Conduct legal research and assist with document review',
             duty2: 'Draft, organize, and proofread legal documents',
-            duty3: 'Assist in preparing court filings or immigration applications',
-            duty4: 'Manage case files and communicate with clients or agencies',
-            duty5: 'Complete other tasks assigned by attorneys',
+            duty3: 'Assist with preparation and filing of court or immigration applications',
+            duty4: 'Maintain case files and communicate with clients or agencies',
+            duty5: 'Perform other tasks assigned by supervising attorneys',
             requirements: 'Requirements:',
-            requirement1: 'Graduate from a U.S. law school (JD preferred)',
-            requirement2: 'Strong reading and writing skills in both Chinese and English, able to handle bilingual documents',
-            requirement3: 'Detail-oriented, careful, and responsible',
-            requirement4: 'Experience in law firm or related field preferred',
+            requirement1: 'Graduate of a U.S. law school (J.D. preferred)',
+            requirement2: 'Strong English and Chinese reading/writing skills; able to work with bilingual documents',
+            requirement3: 'Detail-oriented, responsible, and organized',
+            requirement4: 'Prior law firm or relevant experience preferred',
             workArrangement: 'Work Arrangement:',
             location: 'Location: Flushing, New York',
             applicationMethod: 'How to Apply:',
-            applicationInfo: 'Please send your resume to: catherine.lyu@lyulawpllc.com',
-            emailSubject: 'Email subject: "Law Clerk – Your Name"'
+            applicationInfo: 'Please send your resume to catherine.lyu@lyulawpllc.com',
+            emailSubject: 'Email subject line: "Law Clerk – [Your Name]"'
         }
     }
 };
