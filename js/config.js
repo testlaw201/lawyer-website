@@ -23,7 +23,7 @@ const CONTACT_CONFIG = {
         phone1: '(212)812-8253',
         phone2: '(347)966-1978',
         email: 'catherine.lyu@lyulawpllc.com',
-        wechat: 'catherinelyuesq',
+        wechat: 'lyulaw',
         address: '36-36 Prince St., #309A',
         addressDetail: 'Flushing, NY 11354',
         officeHours: '周一至周六 9:00 AM - 5:30 PM<br>周日 （仅限预约）'
